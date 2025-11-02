@@ -3,11 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boston Prediction</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ABE2, #5563DE);
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+
+        div {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            margin: 0 auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus {
+            box-shadow: 0 0 10px rgba(255,255,255,0.6);
+        }
+
+        button {
+            background-color: #00bfa6;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 85%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #009e8a;
+        }
+
+        /* Style for prediction output */
+        .prediction-text {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-top: 20px;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     
-<h1>Hello world</h1>
+<h1>Boston House Price Prediction</h1>
 
 <!-- Main input for receiving query to our ML -->
 <div>
@@ -30,11 +95,10 @@
     <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
 </form>
 
-
 </div>
 
-{{prediction_text}}
-
+<!-- Wrap Flask output in a styled container -->
+<p class="prediction-text">{{ prediction_text }}</p>
 
 </body>
 </html>
