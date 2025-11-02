@@ -4,7 +4,7 @@ This is a complete **Machine Learning web application** built using
 **Flask** that predicts Boston house prices based on various features.\
 You can deploy it easily using **Render** or **Docker**.
 
- Live on : [Render](https://bostonhousepred-end2end.onrender.com/predict)
+ Live on : [Render](https://bostonhousepred-end2end.onrender.com)
 
 ------------------------------------------------------------------------
 
